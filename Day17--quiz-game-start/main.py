@@ -1,4 +1,4 @@
-#  Creating a quiz game with oop
+# Creating a quiz game with oop
 from question_model import Question
 from data import question_data
 from quiz_brain import QuizBrain
