@@ -1,4 +1,4 @@
-# Fully randomized turtle race with a bet
+#  Fully randomized turtle race with a bet
 import random
 from turtle import Turtle, Screen
 
