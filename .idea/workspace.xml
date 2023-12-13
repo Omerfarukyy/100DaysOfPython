@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="432f624e-65e1-41e8-99fd-8e2bd247290f" name="Changes" comment=".">
+      <change afterPath="$PROJECT_DIR$/Day20-21--Snake-Game/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day19/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day19/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day20-21--Snake-Game/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day20-21--Snake-Game/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day20-21--Snake-Game/scoreboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day20-21--Snake-Game/scoreboard.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day20-21--Snake-Game/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day20-21--Snake-Game/snake.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +67,12 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yigid/OneDrive/Documents/GitHub/100DaysOfPython&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yigid/Documents/GitHub/100DaysOfPython&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\yigid\Documents\GitHub\100DaysOfPython" />
       <recent name="C:\Users\yigid\OneDrive\Documents\GitHub\100DaysOfPython" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -308,7 +313,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702447582764</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary=".">
+      <option name="closed" value="true" />
+      <created>1702455101824</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702455101824</updated>
+    </task>
+    <task id="LOCAL-00014" summary=".">
+      <option name="closed" value="true" />
+      <created>1702455244278</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702455244278</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
