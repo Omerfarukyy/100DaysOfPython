@@ -15,7 +15,7 @@ def load_high_score():
         with open("data.txt", "r") as file:
             return int(file.read())
     except ValueError:
-        with open("data.txt","w") as file:
+        with open("data.txt", "w") as file:
             file.write("0")
         # If the file doesn't exist yet, return a default value (e.g., 0)
         return 0
@@ -24,6 +24,7 @@ def load_high_score():
 def save_high_score(score):
     with open("data.txt", "w") as file:
         file.write(str(score))
+
 
 snake = Snake()
 food = Food()
@@ -34,6 +35,7 @@ screen.onkey(snake.down, "s")
 screen.onkey(snake.left, "a")
 screen.onkey(snake.right, "d")
 scoreboard.high_score = load_high_score()
+scoreboard.update_scoreboard()
 game_is_on = True
 while game_is_on:
     screen.update()
