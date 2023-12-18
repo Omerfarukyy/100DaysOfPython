@@ -1,11 +1,33 @@
 import turtle
+import pandas
+from guess import Guess
 
 screen = turtle.Screen()
 screen.title("U.S States Game")
 image = "blank_states_img.gif"
 screen.addshape(image)
+
 turtle.shape(image)
 
-answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?")
+states = pandas.read_csv("50_states.csv")
+all_states = states.state.to_list()
 
-screen.exitonclick()
+guess = Guess()
+answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?").title()
+
+while len(guess.correct_guesses) < 50:
+    if answer_state == "Exit":
+        break
+    if answer_state in all_states:
+        guess.correct_guess(answer_state)
+        answer_state = screen.textinput(f"{guess.count} / 50 States Correct", "What's another state's name?").title()
+        if answer_state == "Exit":
+            break
+    else:
+        answer_state = screen.textinput(f"{guess.count} / 50 States Correct", "What's another state's name?").title()
+        if answer_state == "Exit":
+            break
+
+missing_states = set(all_states) ^ set(guess.correct_guesses)
+print(f"Those you didn't find: {missing_states}")
+
