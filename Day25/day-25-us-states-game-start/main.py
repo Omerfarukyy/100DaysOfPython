@@ -29,5 +29,12 @@ while len(guess.correct_guesses) < 50:
             break
 
 missing_states = set(all_states) ^ set(guess.correct_guesses)
-print(f"Those you didn't find: {missing_states}")
-
+print(f"Those you didn't find ({len(missing_states)}): {missing_states}")
+missing_states = list(missing_states)
+data = {
+    "missing_states": []
+}
+for s in missing_states:
+    data["missing_states"].append(s)
+new_data = pandas.DataFrame(data)
+new_data.to_csv("missing_states.csv")

@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="432f624e-65e1-41e8-99fd-8e2bd247290f" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/Day25/day-25-us-states-game-start/guess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day25/day-25-us-states-game-start/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day25/day-25-us-states-game-start/main.py" afterDir="false" />
     </list>
@@ -339,8 +338,19 @@
       <option name="project" value="LOCAL" />
       <updated>1702660665861</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary=".">
+      <option name="closed" value="true" />
+      <created>1702901292307</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1702901292307</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
