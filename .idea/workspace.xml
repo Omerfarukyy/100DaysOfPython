@@ -39,7 +39,7 @@
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
-        <option name="accountId" value="9af35f67-d51b-49fb-8eaf-9bf0dee16b8e" />
+        <option name="accountId" value="86e0aecd-e958-48dc-ae5c-080c95985af3" />
         <option name="url" value="https://github.com/Omerfarukyy/100DaysOfPython.git" />
       </UrlAndAccount>
     </option>
@@ -63,13 +63,13 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/yigid/OneDrive/Documents/GitHub/100DaysOfPython/Day24&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/yigid/Documents/GitHub/100DaysOfPython&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\yigid\OneDrive\Documents\GitHub\100DaysOfPython\Day24" />
       <recent name="C:\Users\yigid\Documents\GitHub\100DaysOfPython" />
+      <recent name="C:\Users\yigid\OneDrive\Documents\GitHub\100DaysOfPython\Day24" />
       <recent name="C:\Users\yigid\OneDrive\Documents\GitHub\100DaysOfPython" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -361,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702902265166</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary=".">
+      <option name="closed" value="true" />
+      <created>1703060078753</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703060078753</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="UnknownFeatures">
