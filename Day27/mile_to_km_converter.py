@@ -21,7 +21,6 @@ Km = Label(text="Km")
 Km.grid(column=2, row=1)
 Km.config(padx=1, pady=1)
 
-
 def converter():
     mile = int(inpt.get())
     km = mile * 1.6
