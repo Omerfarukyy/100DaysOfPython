@@ -35,13 +35,13 @@ def start_timer():
     long_break_sec = LONG_BREAK_MIN * 60
     if reps % 2 == 1:
         timer_label.config(text="Work",fg=GREEN)
-        count_down(5)
+        count_down(work_sec)
     elif reps == 8:
         timer_label.config(text="Break", fg=RED)
-        count_down(3)
+        count_down(long_break_sec)
     else:
         timer_label.config(text="Break", fg=RED)
-        count_down(2)
+        count_down(short_break_sec)
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
