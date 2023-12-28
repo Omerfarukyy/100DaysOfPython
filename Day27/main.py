@@ -1,5 +1,4 @@
 from tkinter import *
-
 window = Tk()
 window.title("gui")
 window.minsize(width=500, height=300)
