@@ -1,12 +1,14 @@
 import pandas
 
-word = input()
 phonetic_alphabet_list = pandas.read_csv("nato_phonetic_alphabet.csv")
-alphabet_list = {}
+phonetic_dict = {row.letter: row.code for (index, row) in phonetic_alphabet_list.iterrows()}
+print(phonetic_dict)
 
-for (index, row) in phonetic_alphabet_list.iterrows():
-    new_dict = {row.letter: row.code for item in row}
-    alphabet_list.update(new_dict)
-
-result = [alphabet_list[letter] for letter in word.upper()]
-print(result)
+while True:
+    try:
+        word = input().upper()
+        output = [phonetic_dict[letter] for letter in word]
+        break
+    except KeyError:
+        print("Please enter a valid text")
+print(output)
