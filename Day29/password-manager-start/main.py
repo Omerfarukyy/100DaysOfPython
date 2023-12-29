@@ -6,6 +6,7 @@ import pyperclip
 # automatically call this email for password manager
 EMAIL_CONSTANT = "xx@hotmail.com"
 global exist
+
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 
