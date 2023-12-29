@@ -1,10 +1,11 @@
+import json
 from tkinter import *
 from tkinter import messagebox
 from random import randint, shuffle, choice
 import pyperclip
 # automatically call this email for password manager
 EMAIL_CONSTANT = "xx@hotmail.com"
-
+global exist
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 
@@ -28,30 +29,75 @@ def password_generate():
 
     password = "".join(password_list)
 
+    password_input.delete(0, END)
     password_input.insert(0, password)
+
     pyperclip.copy(f"{password}")
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 
 def save():
-
+    global exist
     website = website_input.get()
     email = email_input.get()
     password = password_input.get()
+    new_data = {
+        website: {
+            "email": email,
+            "password": password
+        }
+    }
+    try:
+        with open("data.json", "r") as file:
+            data = json.load(file)
+    except FileNotFoundError:
+        pass
+    exist = website in data
     if len(website) == 0 or len(email) == 0 or len(password) == 0:
         messagebox.showwarning(title="Error", message="Please fill the empty fields")
+    elif exist:
+        messagebox.showwarning(message="This site is already in password manager")
 
     else:
         is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email}"
                                                               f"\nPassword:{password} \n Is it ok to save?")
         if is_ok:
-            with open("data.txt", "a") as file:
-                file.write(f"{website} / {email} / {password} \n")
-            website_input.delete(0, END)
-            password_input.delete(0, END)
+            try:
+                with open("data.json", "r") as file:
+                    data = json.load(file)
+            except FileNotFoundError:
+                with open("data.json", "w") as file:
+                    json.dump(new_data, file, indent=4)
+            else:
+                data.update(new_data)
+                with open("data.json", "w") as data_file:
+                    json.dump(data, data_file, indent=4)
+            finally:
+                website_input.delete(0, END)
+                password_input.delete(0, END)
 
+# ------------------------- SEARCH WEBSITE -----------------------------#
+
+
+def search():
+    try:
+        website_name = website_input.get()
+        with open("data.json") as file:
+            data = json.load(file)
+        website = data[website_name]
+        website_email = website["email"]
+        website_password = website["password"]
+    except FileNotFoundError:
+        messagebox.showwarning(message="Password Manager is empty")
+    except KeyError:
+        messagebox.showwarning(message=f"There is no site name like {website_name} in password manager ")
+    else:
+        messagebox.showinfo(title=f"{website_name}", message=f"Email: {website_email}\n Password:{website_password}")
+        pyperclip.copy(f"{website_password}")
 
 # ---------------------------- UI SETUP ------------------------------- #
+
+
 window = Tk()
 window.title("Password Manager")
 window.minsize(width=500, height=400)
@@ -65,10 +111,12 @@ canvas.grid(column=1, row=0)
 website_label = Label(text="Website:", font=("Arial", 10, "bold"))
 website_label.grid(column=0, row=1)
 
-website_input = Entry(width=50)
-website_input.grid(column=1, row=1, columnspan=2)
+website_input = Entry(width=32)
+website_input.grid(column=1, row=1)
 website_input.focus()
 
+website_button = Button(text="Search", width=14, command=search)
+website_button.grid(column=2, row=1)
 
 email_label = Label(text="Email/Username:", font=("Arial", 10, "bold"))
 email_label.grid(column=0, row=2)
