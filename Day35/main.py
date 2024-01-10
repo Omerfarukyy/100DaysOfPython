@@ -1,6 +1,7 @@
 import requests
 from twilio.rest import Client
 
+# For twilio
 # This Auth Token is expired
 account_sid = 'AC34250a225d403d0ccba6e056114a4601'
 auth_token = 'ff8caae6f749a7273549cc7963cc9bf7'
@@ -13,7 +14,8 @@ message = client.messages.create(
   to='+90************'
 )
 
-api_key = "f15c0866b5b9353065af54bf4a24f9b7"
+# For OpenWeather
+api_key = "-"
 MY_LAT = 41.008240
 MY_LONG = 28.978359
 COUNT = 5
