@@ -4,10 +4,10 @@ from twilio.rest import Client
 
 
 account_sid = 'AC34250a225d403d0ccba6e056114a4601'
-auth_token = os.environ["TWILIO_AUTH_TOKEN"]
+auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
 client = Client(account_sid, auth_token)
 
-phone_num = os.environ["PERSONAL_PHONE_NUMBER"]
+phone_num = os.environ.get("PERSONAL_PHONE_NUMBER")
 
 message = client.messages.create(
   from_='+15186621005',
@@ -16,7 +16,7 @@ message = client.messages.create(
 )
 
 
-api_key = os.environ["OPENWEATHER_API_KEY"]
+api_key = os.environ.get("OPENWEATHER_API_KEY")
 MY_LAT = 41.008240
 MY_LONG = 28.978359
 COUNT = 5
