@@ -1,21 +1,22 @@
+import os
 import requests
 from twilio.rest import Client
 
-# For twilio
-# This Auth Token is expired
+
 account_sid = 'AC34250a225d403d0ccba6e056114a4601'
-auth_token = 'ff8caae6f749a7273549cc7963cc9bf7'
+auth_token = os.environ["TWILIO_AUTH_TOKEN"]
 client = Client(account_sid, auth_token)
+
+phone_num = os.environ["PERSONAL_PHONE_NUMBER"]
 
 message = client.messages.create(
   from_='+15186621005',
   body='Bring an umbrella, its a rainy day',
-  #   for the privacy, I do not show my number
-  to='+90************'
+  to=phone_num
 )
 
-# For OpenWeather
-api_key = "-"
+
+api_key = os.environ["OPENWEATHER_API_KEY"]
 MY_LAT = 41.008240
 MY_LONG = 28.978359
 COUNT = 5
