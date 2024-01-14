@@ -3,20 +3,20 @@ import requests
 from twilio.rest import Client
 
 
-account_sid = 'AC34250a225d403d0ccba6e056114a4601'
-auth_token = os.environ.get("TWILIO_AUTH_TOKEN")
+account_sid = os.environ.get("ACCOUNT_SID")
+auth_token = os.environ.get("auth_token")
 client = Client(account_sid, auth_token)
 
-phone_num = os.environ.get("PERSONAL_PHONE_NUMBER")
+phone_num = os.environ.get("phone_num")
 
 message = client.messages.create(
-  from_='+15186621005',
+  from_='+13365858295',
   body='Bring an umbrella, its a rainy day',
   to=phone_num
 )
 
 
-api_key = os.environ.get("OPENWEATHER_API_KEY")
+api_key = os.environ.get("api_key")
 MY_LAT = 41.008240
 MY_LONG = 28.978359
 COUNT = 5
