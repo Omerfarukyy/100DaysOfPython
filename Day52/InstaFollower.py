@@ -17,7 +17,7 @@ class InstaFollower:
         self.password = "omerfaruk"
 
     def login(self):
-        sleep(8)
+        sleep(17)
         self.driver.get(instagram)
         email_input = self.driver.find_element(By.XPATH, value='//*[@id="loginForm"]/div/div[1]/div/label/input')
         password_input = self.driver.find_element(By.XPATH, value='//*[@id="loginForm"]/div/div[2]/div/label/input')
@@ -27,12 +27,17 @@ class InstaFollower:
         password_input.send_keys(self.password, Keys.ENTER)
 
     def find_followers(self):
-        sleep(4)
-        self.driver.get(f"{instagram}{target_account}/followers")
-        scr1 = self.driver.find_element(By.XPATH, value='/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/di'
-                                                 'v[3]/div[1]/div')
-        sleep(4)
-        self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scr1)
+        sleep(8)
+        self.driver.get(f"{instagram}{target_account}")
+
+        for _ in range(10):
+            self.driver.find_element('/html/body/div[5]/div/div/div[2]//a').send_keys(Keys.END)
+            sleep(2)  # Allow the list to update
 
     def follow(self):
-        pass
+        sleep(10)
+        list_buttons = self.driver.find_elements(By.XPATH, value='/html/body/div[5]/div/div/div[2]/ul//button')
+        for button in list_buttons:
+            if button.text == "Follow":
+                button.click()
+                sleep(2)
