@@ -44,14 +44,12 @@ class InternetSpeedTwitterBot:
                                                                'div[2]/div/input')
         email_thing.send_keys("pythontestomer@gmail.com", Keys.ENTER)
         sleep(2)
-        username_thing = self.driver.find_element(By.XPATH, value='//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/'
-                                                                  'div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/label'
-                                                                  '/div/div[2]/div/input')
-        username_thing.send_keys("PythonComplaint", Keys.ENTER)
-        sleep(2)
-        password_input = self.driver.find_element(By.XPATH, value='//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/'
-                                                                  'div[2]/div/div/div[2]/div[2]/div[1]/div/div/div[3]/d'
-                                                                  'iv/label/div/div[2]/div[1]/input')
+        # username_thing = self.driver.find_element(By.XPATH, value='//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/'
+        #                                                           'div[2]/div/div/div[2]/div[2]/div[1]/div/div[2]/label'
+        #                                                           '/div/div[2]/div/input')
+        # username_thing.send_keys("PythonComplaint", Keys.ENTER)
+        sleep(3)
+        password_input = self.driver.find_element(By.XPATH, value='/html/body/div/div/div/div[1]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[1]/div/div/div[3]/div/label/div/div[2]/div[1]/input')
         password_input.send_keys("omerfaruk", Keys.ENTER)
         sleep(3)
         tweet_input = self.driver.find_element(By.XPATH, value='//*[@id="react-root"]/div/div/div[2]/main/div/div/div/d'
